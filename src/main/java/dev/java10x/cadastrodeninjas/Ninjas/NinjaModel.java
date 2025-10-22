@@ -17,8 +17,12 @@ public class NinjaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
+
+    @Column(unique = true) // Não ter emails repetidos
     private String email;
+
     private int idade;
 
     // Muitos Ninjas(Many) vão ter uma missão(One)
